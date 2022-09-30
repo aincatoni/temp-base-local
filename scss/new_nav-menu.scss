@@ -1,0 +1,299 @@
+@import "mixins";
+
+$verde: #43d87e;
+$negro: #000000;
+$amarillo: #e2ffec;
+$azul: #0042fd;
+
+// EN CADA LP HACER:
+// editar cada css y comentar las propiedades para las class
+// tabs-fixed
+// menu-fixed
+// container-barra-nav-categorias (desktop y mobile)
+// ul.tabs_cool (desktop y mobile)
+// editar cada js y comentar cada toggleMenu para tabs_cool
+// agregar la class "grid-container" en el content que necesite el nuevo ancho meet
+// agregar la class "nav-submenu" al submenu class "responsive"
+
+// 1.- menu principal - barra de menu verde ahora azul al 100% de pagina
+// 2.- submenu lp - submenu para lp con tipos de productos
+// 3.- grid content - grid width de meet para encajar lp
+// 4.- separador espacial - box con titulo para categirias de productos
+// 5.- product-list - fix grid de produtos propuesto por meet
+
+// 1. menu principal
+.barra-top-fij {
+  height: auto;
+
+  .menu_landing {
+    display: grid;
+    grid-template-columns: 1fr min(142rem, calc(100% - 32px)) 1fr;
+    background: $azul;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 1rem;
+    height: auto;
+    padding: 0;
+    z-index: 1;
+
+    &.menu-fixed {
+      position: fixed;
+      top: 0;
+
+      @include purple {
+        position: relative !important;
+      }
+    }
+
+    .fix-width-nav {
+      height: auto;
+      max-width: 100%;
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      @include purple {
+        position: relative;
+
+        .selected_item {
+          color: #fff;
+        }
+      }
+
+      ul.tabs_cool {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-auto-flow: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        @include purple {
+          white-space: nowrap;
+          overflow: scroll;
+          display: grid;
+          grid-auto-flow: column;
+        }
+
+        li {
+          display: grid;
+          justify-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          border-bottom: 1px solid white;
+          padding: 1.5rem;
+          height: 100%;
+
+          @include purple {
+            padding: 15px 20px;
+          }
+
+          a {
+            color: #fff;
+            max-width: 11rem;
+            font-size: 14px;
+            text-align: center;
+          }
+
+          &.active {
+            border-bottom: 3px solid $verde;
+
+            a {
+              color: $verde;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 2. submenu lp
+.nav-submenu.responsive {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr min(142rem, calc(100% - 32px)) 1fr;
+  background: none;
+
+  .naav {
+    text-align: center;
+
+    .chapternav-link {
+      color: #fff;
+    }
+  }
+
+  @include purple {
+    display: flex;
+    width: 100%;
+  }
+
+  > div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background: $azul;
+    width: 100%;
+
+    @include purple {
+      max-width: 100%;
+    }
+  }
+
+  .slick-slide {
+    padding: 15px 0;
+
+    a {
+      .chapternav-label {
+        font-size: 14px;
+      }
+    }
+
+    &.active {
+      background-color: $verde;
+    }
+  }
+
+  &.tabs-fixed {
+    position: fixed !important;
+    width: 100%;
+
+    @include desktop {
+      display: table;
+      max-width: min(142rem, calc(100% - 32px));
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 120px;
+    }
+
+    @include purple {
+      position: relative !important;
+    }
+  }
+
+  @include purple {
+    .slick-slide {
+      // &:first-child{
+      //     display: block!important;
+      // }
+
+      &.slick-current {
+        background-color: transparent;
+      }
+
+      // &.slick-active{
+      //     // background-color: $verde;
+      // }
+
+      // &:first-child {
+      //     display: block !important;
+      // }
+    }
+
+    .slick-next,
+    .slick-prev {
+      border: 0 !important;
+      background: none !important;
+    }
+  }
+
+  &.slick-slider {
+    @include purple {
+      .slick-slide:first-child {
+        display: none !important;
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+      font-weight: 300;
+      letter-spacing: 0em;
+      border-radius: 0;
+      position: absolute !important;
+      bottom: 0;
+      text-align: center;
+      width: 35px !important;
+      z-index: 10;
+      transition: opacity 150ms ease-out;
+
+      &:before {
+        background-size: contain;
+        height: 15px;
+        width: 35px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "" !important;
+      }
+    }
+
+    .slick-prev {
+      left: 0;
+
+      &:before {
+        background-image: url(../img/left-arrow.png);
+      }
+    }
+
+    .slick-next {
+      right: 0;
+
+      &:before {
+        background-image: url(../img/right-arrow.png);
+      }
+    }
+  }
+}
+
+// 3. grid content width meetcode
+.grid-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr min(142rem, calc(100% - 32px)) 1fr;
+  margin: 0 auto;
+
+  > div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    &.bp-container-fluid {
+      padding: 0;
+    }
+  }
+
+  .bp-container {
+    max-width: 100%;
+  }
+}
+
+// 4. separador espacial
+.separador-especial {
+  background-image: none;
+  background-color: $verde;
+}
+
+// 5. product-list
+.mb-space.bp-container {
+  > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include orange {
+      grid-template-columns: repeat(6, 1fr) !important;
+    }
+
+    @include green {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    @include purple {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+//
+.mac-width {
+  max-width: 100%;
+}

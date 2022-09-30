@@ -1,0 +1,49 @@
+// Screen size variables
+$screen-xxs-min: 320px; // Paty's Iphone
+$screen-iphoneX-min: 375px; // x Iphones
+$screen-xs-min: 430px; // Tiny phones
+$screen-sm-min: 580px; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px; // Small tablets (portrait view)
+$screen-lg-min: 992px; // Tablets and small desktops
+$screen-ipadpro-min: 1024px; // Tablets and small desktops
+$screen-xl-min: 1280px; // Large tablets and desktops
+
+$screen-xxl-min: 1366px; // Large tablets and desktops
+$screen-mac-min: 1440px; // mac screens
+$screen-fhd-min: 1920px; // Full hd screens
+$screen-mac15-min: 2880px; // mac 15" retina screens
+
+// Mixins RESPONSIVE
+@mixin xxs { @media (max-width: #{$screen-xxs-min}) {@content;} } // Tiny devices
+@mixin xs { @media (max-width: #{$screen-xs-min}) {@content;} } // Tiny devices
+@mixin iphoneX { @media (max-width: #{$screen-iphoneX-min}) {@content;} } // Iphone X
+@mixin sm { @media (max-width: #{$screen-sm-min}) {@content;} } // Small devices
+@mixin md { @media (max-width: #{$screen-md-min}) {@content;} } // Medium devices
+@mixin lg { @media (max-width: #{$screen-lg-min}) {@content;} } // Large devices
+@mixin ipadpro { @media (max-width: #{$screen-ipadpro-min}) {@content;} } // Large devices
+@mixin xl { @media (max-width: #{$screen-xl-min}) {@content;} } // Extra large devices
+
+@mixin xxl { @media (max-width: #{$screen-xxl-min}) {@content;} } // Laptop 1360 devices
+@mixin mac { @media (max-width: #{$screen-mac-min}) {@content;} } // MAC 
+@mixin fhd { @media (max-width: #{$screen-fhd-min}) {@content;} } // MAC RETINA 15
+@mixin mac15 { @media (max-width: #{$screen-mac15-min}) {@content;} } // MAC RETINA 15
+
+@mixin lime { @media (min-width: 1400px) {@content;} }
+@mixin red { @media (min-width: 1200px) and (max-width: 1399px) {@content;} }
+@mixin orange { @media (min-width: 992px) and (max-width: 1199px) {@content;} }
+@mixin green { @media (max-width: 991px) {@content;} }
+@mixin desktop { @media (min-width: 768px) {@content;} }
+@mixin purple { @media (max-width: 767px) {@content;} }
+@mixin lightblue { @media (max-width: 480px) {@content;} }
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin transition{
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
