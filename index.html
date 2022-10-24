@@ -10,11 +10,14 @@
     <!--HEAD Landing PCF -->
     <!-- *** CSS INTERNO *** -->
     <!-- Boostrap 5 -->
-    <link rel="stylesheet" type="text/css" href="css/bs-5.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/bs-5.css" /> -->
 
     <!-- CSS Landing -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+
+    <!-- CSS GRID LAYOUT -->
+    <link rel="stylesheet" href="./css/main.css" />
 
     <!-- Grid BP -->
     <link rel="stylesheet" type="text/css" href="css/bp-grid.min.css" />
@@ -44,7 +47,7 @@
       <div class="contenedor-general">
         <!-- INICIO CONTENIDO -->
         <label id="cont_scroll"></label>
-        <div class="cont_fich_nuev bp">
+        <div class="cont_fich_nuev">
           <!-- *** HEADER CAMPAÑA ****************************************** -->
           <div class="headerlanding">
             <a id="img_header">
@@ -163,7 +166,79 @@
           </div>
 
           <!-- CONTENIDO LANDING -->
-          <div class="landing"></div>
+          <div class="landing">
+            <!-- CARDS GRID -->
+            <div class="container-cards">
+              <div class="cards grid">
+                <div class="card" id="bigOne">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img
+                        src="./img/guia_de_comparador_de_productos2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="textCard">
+                      <h3>Guía de comparador de productos</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="card" id="bigTwo">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img src="./img/wifi_6.png" alt="" />
+                    </div>
+                    <div class="textCard">
+                      <h3>WiFi 6</h3>
+                      <p>Prepárate para la nueva generación de WiFi_</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card" id="smallOne">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img src="./img/la_guia_del_monitor_gamer.png" alt="" />
+                    </div>
+                    <div class="textCard">
+                      <h3>La guía del monitor gamer</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="card" id="smallTwo">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img src="img/smart_home.png" alt="" />
+                    </div>
+                    <div class="textCard">
+                      <h3>Smart Home</h3>
+                      <p>Tu hogar inteligente_</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card" id="smallThree">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img src="img/la_guia_del_ssd.png" alt="" />
+                    </div>
+                    <div class="textCard">
+                      <h3>La guía del SSD_</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="card" id="smallFour">
+                  <a href="#">
+                    <div class="imageCard">
+                      <img src="img/ups.png" alt="" />
+                    </div>
+                    <div class="textCard">
+                      <h3>UPS</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- /CARDS GRID -->
+          </div>
           <!-- /CONTENIDO LANDING -->
 
           <!-- PRODUCTOS LANDING -->

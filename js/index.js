@@ -104,6 +104,13 @@ $(document).ready(function () {
   // });
 });
 
+function toggleMenu() {
+  // if ($(window).width() <= 991) {
+  // 	$(".tabs_cool").slideToggle()
+  // 	//$('.img-menu-icon').toggleClass("rotate")
+  // }
+}
+
 $(document).ready(function () {
   $(".submenu").slick({
     dots: false,
@@ -155,7 +162,7 @@ $(document).ready(function () {
 
   guardarSections();
 
-  const ocutarSection = () => {
+  const ocultarSection = () => {
     for (let j = 0; j < arraySegundoHijo.length; j++) {
       if (arraySegundoHijo[j].hasChildNodes() === false) {
         arraySections[j].style.display = "none";
@@ -163,10 +170,19 @@ $(document).ready(function () {
     }
   };
 
-  ocutarSection();
-
-  const sec = document.querySelectorAll("section");
-  const li = document.querySelector(".nav");
-
-  console.log();
+  ocultarSection();
 });
+
+const sec = document.querySelectorAll("section");
+const li = document.querySelector(".nav");
+
+function activeMenu() {
+  let len = sec.length;
+  while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
+  li.forEach((ltx) => ltx.classList.remove("active"));
+  li[len].classList.add("active");
+}
+
+activeMenu();
+
+window.addEventListener("scroll", activeMenu);
