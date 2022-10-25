@@ -62,6 +62,7 @@
 
 .cont_fich_nuev {
   font-size: 16px;
+  background-color: black;
 }
 
 /********************************/
@@ -362,4 +363,3 @@ a.buttonSeeAll:hover {
   max-width: 1420px;
   margin: 0 auto;
 }
-

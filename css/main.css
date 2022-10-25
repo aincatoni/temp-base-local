@@ -30,74 +30,71 @@ a {
 }
 
 .textCard {
-  padding: 10px 0 14px 20px;
+  /*  padding: 10px 0 14px 20px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 95%;
+  width: 95%; */
 }
 
 .textCard h3 {
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
 }
 
 .container-cards {
-  max-width: 768px;
+  /* max-width: 768px;
   width: 90%;
-  margin-inline: auto;
+  margin-inline: auto; */
 }
 
 .grid {
   display: grid;
-  gap: 25px;
+  /* gap: 25px; */
 }
 
 /* Cards Desktop */
 @media (min-width: 768px) {
   .container-cards {
-    max-width: 1400px;
+    max-width: 2000px;
     margin-inline: auto;
   }
 
   .grid {
     display: grid;
+    /* gap: 10px; */
+    grid-template-rows: 230px 230px;
+    grid-template-columns: repeat(6, 1fr) 1fr 1fr 1fr 1fr;
     gap: 10px;
-    grid-template-rows: repeat(9, 50px);
   }
 
   .card {
-    min-height: 200px;
+    /* min-height: 200px; */
   }
 
-  .card .imageCard img {
+  .imageCard img {
     width: 100%;
+    height: 130px;
     object-fit: cover;
-    height: 150px;
     object-position: bottom;
   }
 
-  #bigOne .imageCard img,
-  #bigTwo .imageCard img {
-    height: 380px;
-  }
-
   #bigOne {
-    grid-area: 1 / 1 / span 8 / span 4;
+    grid-area: 1 / 1 / span 2 / span 3;
   }
 
   #bigTwo {
-    grid-area: 1 / 5 / span 8 / span 4;
+    grid-area: 1 / 4 / span 2 / span 3;
   }
 
   #smallOne {
-    grid-area: 1 / 9 / span 4 / span 3;
+    grid-area: 1 / 7 / span 1 / span 2;
   }
   #smallTwo {
-    grid-area: 1 / 12 / span 4 / span 3;
+    grid-area: 1 / 9 / span 1 / span 2;
   }
 
   #smallThree {
-    grid-area: 5 / 9 / span 4 / span 3;
+    grid-area: 2 / 7 / span 1 / span 2;
   }
   #smallFour {
-    grid-area: 5 / 12 / span 4 / span 3;
+    grid-area: 2 / 9 / span 1 / span 2;
   }
 }
