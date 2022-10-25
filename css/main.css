@@ -65,14 +65,28 @@ a {
     gap: 10px;
   }
 
-  .card {
-    /* min-height: 200px; */
-  }
-
   .imageCard img {
     width: 100%;
     height: 130px;
     object-fit: cover;
+  }
+
+  .card a {
+    display: grid;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageCardBig {
+    height: 85%;
+  }
+
+  .imageCardBig img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    outline: 1px solid lime;
   }
 
   #bigOne {
