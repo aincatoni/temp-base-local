@@ -7,7 +7,7 @@
 .barra-top-fij .menu_landing {
   display: grid;
   grid-template-columns: 1fr min(142rem, calc(100% - 32px)) 1fr;
-  background: #0042fd;
+  background: #141414;
   margin: 0 auto;
   margin-bottom: 0px;
   margin-bottom: 1rem;
@@ -120,7 +120,7 @@
 .nav-submenu.responsive > div {
   grid-column-start: 2;
   grid-column-end: 3;
-  background: #0042fd;
+  background: #141414;
   width: 100%;
 }
 
@@ -244,7 +244,7 @@
 
 .separador-especial {
   background-image: none;
-  background-color: #43d87e;
+  /* background-color: #43d87e; */
 }
 
 .mb-space.bp-container > div:last-child {

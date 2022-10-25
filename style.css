@@ -62,7 +62,7 @@
 
 .cont_fich_nuev {
   font-size: 16px;
-  background-color: black;
+  /* background-color: var(--black); */
 }
 
 /********************************/
@@ -186,6 +186,7 @@ a.buttonSeeAll:hover {
 .separador-especial {
   background-image: none;
   background-color: #43d87e;
+  
 }
 
 /****************************************/
