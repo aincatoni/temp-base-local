@@ -19,7 +19,6 @@ a {
 }
 
 .card {
-  /* background-color: var(--gray-pcf); */
   background-color: #141414;
   color: var(--white-pcf) !important;
   /* box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1); */
@@ -32,24 +31,14 @@ a {
 
 .textCard {
   padding: 1em 2em;
-  /*  padding: 10px 0 14px 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 95%; */
 }
 
 .textCard h3 {
   /* font-size: 1.5em; */
 }
 
-.container-cards {
-  /* max-width: 768px;
-  width: 90%;
-  margin-inline: auto; */
-}
-
 .grid {
   display: grid;
-  /* gap: 25px; */
 }
 
 /* Cards Desktop */
@@ -109,5 +98,54 @@ a {
   }
   #smallFour {
     grid-area: 2 / 9 / span 1 / span 2;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  #bigOne {
+    grid-area: 1 / 1 / span 2 / span 4;
+  }
+
+  #bigTwo {
+    grid-area: 1 / 5 / span 2 / span 4;
+  }
+
+  #smallOne {
+    grid-area: 4 / 1 / span 1 / span 2;
+  }
+  #smallTwo {
+    grid-area: 4 / 3 / span 1 / span 2;
+  }
+
+  #smallThree {
+    grid-area: 4 / 5 / span 1 / span 2;
+  }
+  #smallFour {
+    grid-area: 4 / 7 / span 1 / span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    width: 95%;
+    margin-inline: auto;
+    gap: 25px;
+  }
+
+  .card {
+  }
+
+  .card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
   }
 }
